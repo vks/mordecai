@@ -261,7 +261,7 @@ def setup_es(hosts, port, use_ssl=False, auth=None):
     return S
 
 def check_geonames_date(conn):
-    r = Q("match", geonameid='4943351')
+    r = Q("match", geonameid='5128581')  # New York City
     result = conn.query(r).execute()
     output = structure_results(result)
     return output['hits']['hits'][0]['modification_date']
